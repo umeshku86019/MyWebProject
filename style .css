@@ -1,0 +1,20 @@
+body{
+
+}
+#index{
+    font-size: 50px;
+    text-align: center;
+}
+#demo{
+font-size:40px;
+}
+#let{
+    font-size:30px;
+}
+address{
+    font-size: 26px;
+    color: rgb(135, 195, 222);
+}
+table{
+    border: 1px;
+}

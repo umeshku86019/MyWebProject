@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum two number</title>
+    <script src="script/angular.min.js"></script>
+</head>
+<body>
+  <div ng-app="myapp" ng-controller="firstcontroller">
+    <p> input the sume number</p>
+    <input type="number" ng-model="a" placeholder="enter the first no."><br><br>
+    <input type="number" ng-model="b" placeholder="enter the secound no."><br><br>
+    <span>{{c}}</span>
+    <button class="btn" ng-click="sum()">sum</button>
+  </div>
+  <script>
+    var app=  angular.module("myapp",[]);
+    app.controller("firstcontroller",function($scope){
+        $scope.a= 0;
+        $scope.b= 0;
+        $scope.c= 0;
+        $scope.sum = function(){
+         $scope.c = $scope.a + $scope.b;   
+        };
+
+    });
+  </script>  
+</body>
+</html>

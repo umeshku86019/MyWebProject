@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>even and odd</title>
+    <script src="script/angular.min.js"></script>
+</head>
+<body>
+    <h1>Even number and odd number</h1>
+    <div ng-app="myapp" ng-controller="EvenController">
+        <input type="number" min="0" ng-model="a" required />
+        <div>
+            <section style="  display: block; Impact, Haettenschweiler, 'Arial Narrow Bold',
+                  sans-serif;
+                background-color: bisque;
+                width: 100px;
+                text-align: center;
+                font-size: xx-large;
+              "
+            >
+              <h1>
+                <span> {{c}} </span>
+              </h1>
+            </section>
+          </div>
+        </div>
+        <script>
+            var app = angular.module("myapp", []);
+            app.controller("EvenController", function($scope){
+                
+            });
+        </script>
+</body>
+</html>

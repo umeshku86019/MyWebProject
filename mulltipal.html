@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mulltipal</title>
+</head>
+<body bgcolor="golds">
+ <h1 style="color: green;">mulltipal of number factor</h1>
+ <input type="number" id="demo"><br><br>
+ <button onclick="multiple()">multiple</button>
+ <script>
+    function multiple(){
+        let x=parseInt(document.getElementById("demo").value)  
+        for(let i=1; i<=10; i++){
+           document.write("<h3>"+x + " x " +i+"=" +(x*i)+"</h3>");
+        }
+    }
+ </script>   
+</body>
+</html>

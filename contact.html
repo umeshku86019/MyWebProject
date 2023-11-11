@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <title>contact list</title>
+    <script src="angular-1.8.2/angular.js"></script>
+</head>
+
+<body bgcolor="pink">
+    <div ng-app="MyApp" ng-controller="CostController">
+        <b style="font-size: 45px;">Bill :</b>
+        <div>
+          <b style="font-size: 40px;">Quantity :</b>
+          <input style="font-size: 20px;" type="number" min="0" ng-model="qty" required />
+        </div>
+        <div>
+         <b style="font-size: 40px;"> Cost :</b>
+          <input style="font-size: 20px;" type="number" min="0" ng-model="cost" required />
+        </div>
+        <div>
+          <b style="font-size: 40px;">Total: </b>
+          <span style="font-size: 40px;"> {{total | currency:'Rs.'}} </span>
+          <button style="font-size: 20px;" class="btn" ng-click="pay()" >Pay</button>
+        </div>
+      </div>
+    <script>
+        var app = angular.module("MyApp", []);
+        app.controller("CostController", function ($scope) {
+          $scope.qty = 0;
+          $scope.cost = 0;
+          $scope.total = 0;
+          $scope.pay = function () {
+            $scope.total = $scope.qty * $scope.cost;
+          };
+       });
+      </script>
+    <h1 style="color:red;"> pleas sumit the form</h1>
+    <table border="1" width="60%" cellspacing="6" cellpadding="5" bgcolor="yellow">
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" name="name" placeholder="enter the name" minlength="3" maxlength="10"></td>
+        </tr>
+        <tr>
+            <td>date:</td>
+            <td><input type="date" name="name" placeholder="date of birt"></td>
+        </tr>
+        <tr>
+            <td>email:</td>
+            <td><input type="text" name="name" placeholder="uk86019@gmail.com"></td>
+        </tr>
+        <tr>
+            <td>gender:</td>
+            <td><input type="radio" name="gender">male
+                <input type="radio" name="gender">female
+                <input type="radio" name="gender">other
+            </td>
+        </tr>
+        <tr>
+            <td>programing languages known:</td>
+            <td>python:<input type="checkbox"><br>
+                c++: <input type="checkbox"></br>
+                c: <input type="checkbox"></br>
+                seo: <input type="checkbox"></br>
+            </td>
+        </tr>
+        <tr>
+            <td>select</td>
+            <td><select>
+                    <option>BA</option>
+                    <option>MB</option>
+                    <option>MC</option>
+                    <option>BCA</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><textarea rows="5px" cols="20px" minlength="10" maxlength="100"></textarea></br></br>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" name="submit"></td>
+            <td><input type="reset"></td>
+        </tr>
+    </table>
+    </form>
+    <a href="calculator.html"><h2 style="color:green;">pleas click here</h2></a>
+
+</body>
+
+</html>

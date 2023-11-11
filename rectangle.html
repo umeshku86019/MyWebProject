@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptech Learning</title>
+</head>
+<body bgcolor="yellow">
+   <h1>Rectenglr of Length and Width</h1> 
+ length: <input type="length" id="demo1"><br><br>
+  width: <input type="width" id="demo2"><br><br> 
+   <button onclick="area(document.getElementById('demo1').value,
+   document.getElementById('demo2').value)">click here</button>
+    <p id="car"></p>
+   <script>
+ function area(length, width) {
+    let result = parseInt(length) * parseInt(width);
+    document.getElementById("car").innerHTML = result;
+ }
+   </script>
+</body>
+</html>

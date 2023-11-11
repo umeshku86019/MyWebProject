@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter in Angular</title>
+    <script src="angular-1.8.2/angular.js"></script>
+</head>
+<body>
+    <div ng-app="filter" ng-controller="namectrl">
+    <h3> movie names using upper case filter</h3>
+    <ul>
+        <li ng-repeat="name in names">{{name|uppercase}}</li>
+    </ul>
+    <h3> movie names using upper case filter</h3>
+    <ul>
+        <li ng-repeat="name in names">{{name|lowercase}}</li>
+    </ul>
+   <h3>Search for movie by entering the name in input box </h3>
+    your search string:
+  <input placeholder="Enter name" type="text" ng-model="srchstr"/>
+  <ul>
+    <li ng-repeat="x in names|filter:srchstr"><img src={{x}} width="80"></li>
+  </ul>
+    </div>
+    <script>
+        var app = angular.module("filter",[]);
+        app.controller("namectrl",function($scope){
+            $scope.names = [
+                "kgf.jpg",
+                "pk.jpg",
+                "robot.jpg",
+                "kanchana.jpg",
+                "satya.jpg",
+                "jawan.jpg",
+                "pathan.jpg",
+                "suriya.jpg",
+                "karan arjun.jpg",
+                "omg.jpg",
+                "gabbar.jpg",
+            ];
+        });
+    </script>
+</body>
+</html>

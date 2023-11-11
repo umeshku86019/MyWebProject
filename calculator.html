@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator in java script </title>
+</head>
+<body bgcolor="gold">
+ <h1>Calculator program in java Script </h1></br>
+ <a href="factors.html"><h2>click here</h2></a>
+Enter the number: <input type="text" id ="num1"></br>
+Enter the secound <input type="text" id ="num2"></br>
+<button onclick="Sum()">Sum</button>
+<button onclick="Quotient()">Quotient</button></br></br>
+<button onclick="Remainder()">Remainder</button>
+<button onclick="Power()">Power</button></br></br>
+<button onclick="Product()">Product</button>
+<button onclick="Difference()">Difference</button>
+<script>
+    function Sum(){
+    let x= parseFloat(document.getElementById("num1").value);
+    let y= parseFloat (document.getElementById("num2").value);
+     alert("Sum of entered number is "+(x+y));
+}
+function Quotient(){
+    let x= parseFloat(document.getElementById("num1").value);
+    let y= parseFloat(document.getElementById("num2").value);
+    alert("Quotient of entered number "+(x/y));
+}
+function Remainder(){
+    let x= parseFloat(document.getElementById("num1").value);
+    let y= parseFloat(document.getElementById("num2").value);
+    alert("Quotient of entered number "+(x%y));
+}
+function Power(){
+    let x= parseFloat(document.getElementById("num1").value);
+    let y= parseFloat(document.getElementById("num2").value);
+    alert("Quotient of entered number "+(x**y));
+}function Product(){
+    let x= parseFloat(document.getElementById("num1").value);
+    let y= parseFloat(document.getElementById("num2").value);
+    alert("Quotient of entered number "+(x*y));
+}function Difference(){
+    let x= parseFloat(document.getElementById("num1").value);
+    let y= parseFloat(document.getElementById("num2").value);
+    alert("Quotient of entered number "+(x-y));
+}
+</script>
+</body>
+</html>

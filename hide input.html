@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input hide two number</title>
+    <script src="script/angular.min.js"></script>
+</head>
+<body>
+   <div ng-app="hide" ng-init="cities=['Ayodhya','Lucknow','akberpur']">
+    <h1>hide the list of countries</h1>
+    <ul ng-hide="y" ng-show="a">
+        <li ng-repeat="city in cities">{{city}}</li>
+    </ul>
+    <p>hide/show the list</p>
+    <input type="checkbox" ng-model="y"/>hide
+    <input type="checkbox" ng-model="a"/>show
+   </div>
+   <script>
+    var ap = angular.module("hide",[]);
+   </script>
+</body>
+</html>

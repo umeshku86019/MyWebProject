@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number comparer</title>
+    <script src="script/angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-app="MyApp" ng-controller="CostController">
+      <h1>check Even odd</h1>
+      <div>
+        First Number:
+        <input type="number" min="0" ng-model="a" required />
+      </div>
+      <div>
+        <section
+          style="
+            display: block;
+            Impact, Haettenschweiler, 'Arial Narrow Bold',
+              sans-serif;
+            background-color: bisque;
+            width: 100px;
+            text-align: center;
+            font-size: xx-large;
+          "
+        >
+          <h1>
+            <span> {{c}} </span>
+          </h1>
+        </section>
+      </div>
+    </div>
+    <script>
+      var app = angular.module("MyApp", []);
+      app.controller("CostController", function ($scope) {
+        $scope.a = 0;
+        $scope.c = 0;
+
+        $scope.$watchGroup(["a", "b"], function () {
+          $scope.compare();
+        });
+
+        $scope.compare = function () {
+          if ($scope.a %2==0) {
+            $scope.c = "Even";
+          } else {
+            $scope.c = "odd";
+          }
+        };
+      });
+    </script>
+  </body>
+</html>
+2 visits · 2 online
+  
+© 2023 JustPaste.it
+Account
+Terms
+Privacy
+Cookies
+Blog
+About

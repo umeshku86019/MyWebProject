@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom fillter in Angular js</title>
+    <script src="script/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="Myapp" ng-controller="appcontroller">
+        <ul>
+            <li ng-repeat="a in names">{{a|myfilter}}</li>
+        </ul>
+    </div>
+    <script>
+        var app = angular.module("Myapp",[]);
+        app.filter("myfilter",function(){
+            return function (a) {
+                return a + "hello";
+            };
+        });
+        
+        app.controller ("appcontroller",function($scope){
+            $scope.names = ["akash","rajesh","umesh","mukesh"];
+        });
+    </script>
+</body>
+</html>

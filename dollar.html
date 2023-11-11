@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/angular.min.js"></script>
+</head>
+<body>
+   <div ng-app="curApp" ng-controller="curController">
+    <p>Currency in dollars {{dollar|currency}}</p>
+    <p>Its value in INR {{currencyINR|currency:"Rs."}}</p>
+   </div>
+   <script>
+    var app = angular.module("curApp",[]);
+    app.controller("curController",function($scope){
+        $scope.dollar = 500;
+        $scope.currencyINR = $scope.dollar * 50;
+    });
+   </script>
+</body>
+</html>

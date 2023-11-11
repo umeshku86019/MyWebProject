@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter the two number</title>
+    <script src="script/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="myapp" ng-controller="mycontroller">
+        <p>enter the number first and secound</p>
+        <input type="number" ng-model="a" placeholder="enter the first no."><br><br>
+        <input type="number" ng-model="b" placeholder="enter the secound no."><br><br>
+        <span>{{c}}</span>
+        <button class="btn" ng-click="pay()">pay</button>
+    </div>
+    <script>
+        var app = angular.module("myapp", []);
+        app.controller("mycontroller", function ($scope) {
+            $scope.a = 0;
+            $scope.b = 0;
+            $scope.c = 5;
+            $scope.pay = function(){
+            if ($scope.a > $scope.b) {
+                $scope.c = $scope.a;
+            }
+            else if ($scope.a > $scope.b) {
+                $scope.c = $scope.a;
+            }
+            else {
+                $scope.c = $scope.b;
+            }
+        });
+    </script>
+</body>
+
+</html>

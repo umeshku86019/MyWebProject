@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date</title>
+    <script src="script/angular.min.js"></script>
+</head>
+<body>
+   <div ng-app="dateApp" ng-controller="mycontroller">
+    <p>Date={{today}}</p>
+    <p>Date={{today | date:"dd.MM.y"}}</p>
+    <p>Date={{today | date:"short"}}</p>
+    <p>Date={{today | date:"medium"}}</p>
+    <p>Date={{today | date:"longDate"}}</p>
+    <p>my name is{{name|uppercase}}</p>
+   </div>
+   <script>
+    var app = angular.module("dateApp",[]);
+    app.controller("mycontroller",function($scope){
+        $scope.today = new Date();
+        $scope.name ="umesh kumar";
+    });
+   </script>
+</body>
+</html>
