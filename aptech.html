@@ -1,15 +1,6 @@
 <html>
 
 <head>
-    <style>
-        img {
-            float: right;
-        }
-
-        address {
-            float: right;
-        }
-    </style>
     <title>aptech learning</title>
     <script src="angular-1.8.2/angular.js"></script>
 </head>
@@ -40,71 +31,77 @@
         MR.manus is the number 7 leader in my village </br>
     </address>
     <link rel="stylesheet" href="style .css">
-    <table border="2px" width="500px" height="200px" bgcolor="pink">
+    <table>
         <tr id="nam">
-            <th style="font-size:25px;">no.1</th>
-            <th style="font-size:25px;">no.2</th>
-            <th style="font-size:25px;">no.3</th>
+            <th>no.1</th>
+            <th>no.2</th>
+            <th>no.3</th>
 
         </tr>
         <tr>
-            <td style="font-size:20px;" align="center"> mr.rakesh</td>
-            <td style="font-size:20px;" align="center"> mr.suraj</td>
-            <td style="font-size: 20px;" align="center"> mr.manu</td>
+            <td> mr.rakesh</td>
+            <td> mr.suraj</td>
+            <td> mr.manu</td>
         </tr>
         <tr>
-            <td style="font-size:20px;" align="center">mr.rajesh</th>
-            <td style="font-size:20px;" align="center">mr.satyam</th>
-            <td style="font-size:20px;" align="center">mr.rahul</th>
+            <td>mr.rajesh</th>
+            <td>mr.satyam</th>
+            <td>mr.rahul</th>
         </tr>
         <tr>
-            <td style="font-size:20px;" align="center">mr.mohan</th>
-            <td style="font-size:20px;" align="center">mr.mukesh</th>
-            <td style="font-size:20px;" align="center">mr.umesh</th>
+            <td>mr.mohan</th>
+            <td>mr.mukesh</th>
+            <td>mr.umesh</th>
         </tr>
         </tr>
     </table>
+
     <div ng-app="filter" ng-controller="namectrl">
         <div style="display: flex;flex-wrap: wrap;">
             <div style="display: flex;flex-basis: 50%;">
-                <h3> movie names using upper case filter</h3>
+                <h3> Agriculture names using upper case filter</h3>
                 <ul>
                     <li ng-repeat="name in names">{{name|uppercase}}</li>
                 </ul>
             </div>
             <div style="display: flex;flex-basis: 50%;">
-                <h3> movie names using upper case filter</h3>
+                <h3> Agriculture names using upper case filter</h3>
                 <ul>
                     <li ng-repeat="name in names">{{name|lowercase}}</li>
                 </ul>
             </div>
         </div>
-        
-            <h3>Search for movie by entering the name in input box </h3>
-            your search string:
-            <input placeholder="Enter name" type="text" ng-model="srchstr" />
+
+        <h3>Search for agricalture by entering the name in input box </h3>
+        your search string:
+        <input placeholder="Enter name" type="text" ng-model="srchstr" />
 
         <div style="display: flex; flex-wrap: wrap;">
             <ul style=" list-style-type: none; padding: 0px;">
-                <li style="margin: 10px; text-align: center;" ng-repeat="x in names|filter:srchstr"><img src={{x}} width="50"></li>
+                <li style="margin: 10px; text-align: center;" ng-repeat="x in names|filter:srchstr">
+                    <div style="padding: 10px;"><img src={{x}} width="50"></div> <br>
+                </li>
             </ul>
+            <div style="padding-left: 80px; padding-top: 39px;">
+                <img src="agriculture.jpg" width="1160px" height="518px" >
+            </div>
         </div>
         <script>
-            
+
             var app = angular.module("filter", []);
             app.controller("namectrl", function ($scope) {
                 $scope.names = [
-                    "kgf.jpg",
-                    "pk.jpg",
-                    "robot.jpg",
-                    "kanchana.jpg",
-                    "satya.jpg",
-                    "jawan.jpg",
-                    "pathaan.jpg",
-                    "suriya.jpg",
-                    "karan arjun.jpg",
-                    "omg.jpg",
-                    "gabbar.jpg",
+                    "Rice.jpg",
+                    "wheat.jpg",
+                    "coliflower.jpg",
+                    "ginger.jpg",
+                    "cabbage.jpg",
+                    "onion.jpg",
+                    "potato.jpg",
+                    "tomato.jpg",
+                    "lady.jpg",
+                    "mustardoil.jpg",
+                    "pea.jpg"
                 ];
             });
         </script>

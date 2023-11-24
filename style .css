@@ -11,10 +11,23 @@ font-size:40px;
 #let{
     font-size:30px;
 }
+
+td, th{
+
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid rebeccapurple;
+}
 address{
     font-size: 26px;
-    color: rgb(135, 195, 222);
+    float: right;
 }
 table{
-    border: 1px;
+    border: 2px solid black;
+    height: 200px;
+    width:500px;
+    background: grey;
+}
+    img {
+    float: right;
 }
